@@ -1,3 +1,20 @@
+<div class="nav">
+<p><%= link_to "Home", @landing_page %>&nbsp</p>
+
+<p><%= link_to "About", static_pages_about_path %>
+<!-- generates the HTML tag: -->
+<a href="http://localhost:3000/about"></a>&nbsp</p>
+
+<p><%= link_to "Bikes", products_path %>
+<!-- generates the HTML tag: -->
+<a href="https://localhost:3000/products"></a>&nbsp</p>
+
+<p><%= link_to "Contact", static_pages_contact_path %>
+<!-- generates the HTML tag: -->
+<a href="http://localhost:3000/contact"></a></p>
+
+</div><br><br>
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	<!--Indicators-->
 	<ol class="carousel-indicators">
@@ -25,6 +42,10 @@
 
 	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 		<span class="glyphicon glyphicon-cheveron-left" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-cheveron-right" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	</a>
 </div>

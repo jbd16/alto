@@ -1,6 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<%= link_to "Home", root_path%>
+<!-- generates the HTML tag: -->
+<a href="http://localhost:3000"></a>
+
+<%= link_to "About", static_pages_about_path%>
+<!-- generates the HTML tag: -->
+<a href="http://localhost:3000/about"></a>
+
+<%= link_to "Bikes", products_path %>
+
+<%= link_to "Contact", static_pages_contact_path %>
+<!-- generates the HTML tag: -->
+<a href="http://localhost:3000/contact"></a>
+
+<h1>Bikes for Sale</h1>
 
 <table>
   <thead>
