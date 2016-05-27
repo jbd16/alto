@@ -6,15 +6,14 @@
 	color: black;
 }
 
-.nav {
-	float: left;
+.navbar ul li {
 	font-family: Helvetica;
 	text-transform: uppercase;
-	padding-right: 2%;
+	float: left;
 	display: block;
 }
 
-.nav p {
+.navbar li {
 	display: inline-block;
 	letter-spacing: 0.5px;
 }

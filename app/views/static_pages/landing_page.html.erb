@@ -1,17 +1,18 @@
-<div class="nav">
-<p><%= link_to "Home", @landing_page %>&nbsp</p>
+<div class="navbar">
+<ul>
+	<li><%= link_to "Home", @landing_page %>&nbsp</li>
 
-<p><%= link_to "About", static_pages_about_path %>
+<li><%= link_to "About", static_pages_about_path %>
 <!-- generates the HTML tag: -->
-<a href="http://localhost:3000/about"></a>&nbsp</p>
+<a href="http://localhost:3000/about"></a>&nbsp</li>
 
-<p><%= link_to "Bikes", products_path %>
+<li><%= link_to "Bikes", products_path %>
 <!-- generates the HTML tag: -->
-<a href="https://localhost:3000/products"></a>&nbsp</p>
+<a href="https://localhost:3000/products"></a>&nbsp</li>
 
-<p><%= link_to "Contact", static_pages_contact_path %>
+<li><%= link_to "Contact", static_pages_contact_path %>
 <!-- generates the HTML tag: -->
-<a href="http://localhost:3000/contact"></a></p>
+<a href="http://localhost:3000/contact"></a></li>
 
 </div><br><br>
 
