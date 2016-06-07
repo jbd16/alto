@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  
+  devise_for :users
   
   resources :products do
     resources :comments
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  devise_for :users
+  
   
   get 'static_pages/about'
 
