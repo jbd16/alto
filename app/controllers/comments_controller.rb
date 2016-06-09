@@ -12,8 +12,7 @@ def create
 		  format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
 		  format.json { render json: @coment.errors, status: :unprocessable_entity }
 		end
-		end
-		end  
+		end 
 	@comment.save
 	redirect_to product_path(@product)
 	@posts = Post.paginate(:page => params[:page])
