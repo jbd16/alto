@@ -10,7 +10,7 @@ def create
 		  format.json { render :show, status: :created, location: @product }
 		else
 		  format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
-		  format.json { render json: @coment.errors, status: :unprocessable_entity }
+		  format.json { render json: @comment.errors, status: :unprocessable_entity }
 		end
 		end 
 	@comment.save
