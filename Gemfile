@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rubygems-update', '~> 2.2', '>= 2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
@@ -48,6 +48,11 @@ group :development do
   gem 'spring'
 end
 
+
+group :development, :test do
+	gem 'rspec-rails', '~> 3.4'
+end
+
 group :production do
 	gem 'rails_12factor'
 	gem 'pg'
@@ -59,6 +64,14 @@ gem 'cancancan'
 
 gem 'will_paginate', '~> 3.1.0'
 
-group :development, :test do
-	gem 'rspec-rails', '~> 3.4'
+group :development do
+	gem 'guard'
 end
+
+gem 'guard-rspec', require: false
+
+gem 'spork-rails'
+
+gem 'guard-spork'
+
+
