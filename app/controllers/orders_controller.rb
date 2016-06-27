@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
 	before_filter :authenticate_user!
 
 	def create
-		(:product_id, :user_id, :total)	
+		
 	end
 
 	def index
