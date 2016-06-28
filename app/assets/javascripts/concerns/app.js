@@ -9,3 +9,8 @@ app.controller('OrdersCtrl', ['$scope', function($scope){
     {id: 3, total: 42, product_id: 1, user_id: 1}
   ];
 }]);
+$scope.addOrder = function(){
+  if(!$scope.newOrder.product_id || $scope.newOrder.total === ''){ return; }
+
+  $scope.orders.push($scope.newOrder);
+}
