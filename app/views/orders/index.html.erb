@@ -5,7 +5,11 @@
 
     <strong>Add order: </strong>
 
-    <input type="hidden" value="{{orders[orders.length - 1].id + 1 }}" ng-model="newOrder.id">
+  <select ng-model="newOrder.product_id" class="form-control">
+  <option value="" disabled selected>Select a product</option>
+  <option ng-repeat="product in products" value="{{product.id}}">{{product.name}}</option>
+</select>
+ 
   <input type="number" step="0.01" class="form-control" placeholder="Total" ng-model="newOrder.total">
   <input type="number" class="form-control" ng-model="newOrder.product_id">
 
@@ -27,8 +31,8 @@
   	<strong>{{order.total | currency}}</strong>
   </td>
   <td>
-    {{order.product_id}}
-      <small ng-show="order.user_id"><br>-{{order.user_id}}</small>
+    {{order.product.name}}
+      <small ng-show="order.user_id"><br>-{{order.user.email}}</small>
 
   </td>
   <td>
@@ -37,4 +41,7 @@
 
   </tr>
 </table>
+<td>
+  <button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+</td>
 </div>
