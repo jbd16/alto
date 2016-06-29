@@ -269,6 +269,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dalli
   devise
+  execjs
   factory_girl_rails (~> 4.0)
   guard
   guard-rspec

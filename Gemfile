@@ -82,3 +82,5 @@ gem 'dalli'
 
 gem 'redis-rails'
 
+gem 'execjs'
+
