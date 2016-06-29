@@ -2,6 +2,7 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
+<% cache @product do %>
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -11,6 +12,7 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
+<% end %>
 
 <p>
   <%= image_tag("#{@product.image_url}", class: "img-zoom", data_zoom_image: "#{@product.image_url}") %>
