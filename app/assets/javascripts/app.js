@@ -11,10 +11,10 @@ app.factory('models', ['$resource', function($resource){
   };
   return x;
 }]);
-app.controller('OrdersCtrl', ['$scope', function($scope, models){
+app.controller('OrdersCtrl', ['$scope', 'models', function($scope, models){
   $scope.orders = models.orders.query();
   $scope.products = models.products.query();
-}]);
+
 $scope.addOrder = function(){
   if(!$scope.newOrder.product_id || $scope.newOrder.total === ''){ return; }
 
@@ -23,9 +23,10 @@ $scope.addOrder = function(){
   $scope.orders.push(recent_order);
   $scope.newOrder = '';
 });
+}
 
-
-$scope.deleteOrder = models.orders.delete(order){
+$scope.deleteOrder = function(order) {
+  models.orders.delete(order);
   $scope.orders.splice($scope.orders.indexOf(order), 1);
 }
-}
+}]);
