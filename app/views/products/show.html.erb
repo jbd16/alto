@@ -10,12 +10,8 @@
       <div class="col-xs-12">
         <p class="product_description"><%= @product.description %></p>
       </div>
-      <div class="col-xs-6">
-        <h4 class="product_condition">Condition: <%= @product.condition %></h4>
-      </div>
-      <div class="col-xs-6">
-        <h4 class="product_price">£<%= number_with_precision(@product.price, :precision => 2) %></h4>
-      </div>
+    
+    
       <% end %>
       <div class="col-xs-12 stripe_payment">
         <%= hidden_field_tag(:product_id, @product.id) %>
@@ -33,9 +29,7 @@
     </div> 
     <div class="col-xs-12 col-md-4">    
       <%= render "comments" %>
-      <div class="text-center col-xs-12">
-        <%= will_paginate @comments, renderer: BootstrapPagination::Rails %>
-      </div>
+     
     </div>
 
     
