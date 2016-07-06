@@ -15,7 +15,7 @@
       <% end %>
       <div class="col-xs-12 stripe_payment">
         <%= hidden_field_tag(:product_id, @product.id) %>
-        <%= form_tag "/payments/create" do %>
+        <%= form_tag "/orders" do %>
         <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
       </div>
