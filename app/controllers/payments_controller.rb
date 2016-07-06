@@ -18,6 +18,7 @@ def create
 
               if charge.paid
                   Order.create(user_id: current_user.id, product_id: @product.id, total: @product.price)
+                  redirect_to @orders
         end 
 
         rescue Stripe::CardError => e
